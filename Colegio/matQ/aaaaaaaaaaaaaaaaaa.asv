@@ -1,0 +1,9 @@
+vid = VideoReader("1trail.avi");
+numFrames= vid.CurrentTime;
+n= numFrames;
+for i=1:2:n
+   frames = read(vid,1);
+   imwrite(frames,["Image" int2str(1), ".jpg"]);
+   im(i)=image(frames);
+
+end
