@@ -1,0 +1,15 @@
+.hed{
+    color:black;
+    margin-top: 20px;
+}
+
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    width:100%;
+ 
+}

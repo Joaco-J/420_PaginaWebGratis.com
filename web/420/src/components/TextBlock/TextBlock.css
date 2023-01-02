@@ -1,0 +1,61 @@
+.TextB{
+    width:100%;
+   
+}
+
+
+.Block {
+
+    background-color:#0096C7;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 300px;
+    width:90%;
+
+    margin: 20px;
+    padding: 20px;
+
+    border-radius: 5px;
+
+
+}
+
+#Block2{
+    background-color:#023E8A;
+}
+
+.ImgC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+    max-width: 50%;
+    
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.TextC{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width:50%;
+    height:100%
+    
+}
+
+h1 {
+    color: aliceblue;
+}
+
+p {color: aliceblue;}
