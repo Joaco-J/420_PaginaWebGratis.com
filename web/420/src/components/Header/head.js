@@ -4,17 +4,19 @@ import "./head.css";
 import Banner from "../../Images/BanerTest1.jpg";
 import Logo from "../../Images/logo.png";
 
-function bannerT(props) {
-  var Tab = 1;
-  return {
-    Tab,
-    bender: (
+import Home from "../Pages/Home.js";
+import Calendars from "../Pages/Calendars.js";
+import Docs from "../Pages/Docs.js";
+
+class BannerT extends React.Component {
+  state = { Tab: 1 };
+  render() {
+    return (
       <div class="HeadT">
         <div class="ButtonBar">
           <button
             onClick={() => {
-              Tab = 1;
-              console.log(Tab);
+              this.state.Tab = 1;
             }}
           >
             <img src={Logo} id="banner" />
@@ -22,8 +24,8 @@ function bannerT(props) {
           <div class="Bar"></div>
           <button
             onClick={() => {
-              Tab = 2;
-              console.log(Tab);
+              var a = 2;
+              this.setstate({ Tab: a });
             }}
           >
             Calendar
@@ -33,7 +35,7 @@ function bannerT(props) {
           </div>
           <button
             onClick={() => {
-              Tab = 3;
+              this.state.Tab = 3;
             }}
           >
             Info
@@ -43,7 +45,7 @@ function bannerT(props) {
           </div>
           <button
             onClick={() => {
-              Tab = 3;
+              this.state.Tab = 3;
             }}
           >
             Galeria
@@ -53,7 +55,7 @@ function bannerT(props) {
           </div>
           <button
             onClick={() => {
-              Tab = 3;
+              this.state.Tab = 3;
             }}
           >
             Mafia
@@ -62,9 +64,17 @@ function bannerT(props) {
         <div class="ImDiv">
           <img src={Banner} id="banner" />
         </div>
+
+        {this.state.Tab === 1 ? (
+          <Home />
+        ) : this.state.Tab === 2 ? (
+          <Calendars />
+        ) : (
+          <Docs />
+        )}
       </div>
-    ),
-  };
+    );
+  }
 }
 
-export default bannerT;
+export default BannerT;

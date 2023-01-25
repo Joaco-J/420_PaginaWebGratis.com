@@ -1,9 +1,11 @@
 .TextB{
     width:100%;
-   
+   height: 100%;
 }
 
-
+.buttA{
+    background-color: #0096C7;
+}
 .Block {
 
     background-color:#0096C7;
@@ -50,12 +52,15 @@ img {
     flex-direction: column;
 
     width:50%;
-    height:100%
+    height:100%;
+    padding-top:20px;
     
 }
 
-h1 {
+.h1 {
     color: aliceblue;
+    font-size: 5vw;
 }
 
-p {color: aliceblue;}
+.p {color: aliceblue;
+font-size: 2vw;}

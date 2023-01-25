@@ -3,25 +3,32 @@
 
 import React from "react";
 import "./App.css";
-import banner from "./components/Header/head.js";
 
-import Home from "./components/Pages/Home.js";
+import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
+
+import BannerT from "./components/Header/head.js";
+
+import Home from "./components/Pages/Home";
 import Calendars from "./components/Pages/Calendars.js";
 import Docs from "./components/Pages/Docs.js";
 
-const { Tab, bender } = banner();
+import Layout from "./components/Header/Layout";
 
 class App extends React.Component {
   state = {
-    Tab: 1,
+    Tab: 2,
   };
   render() {
     return (
-      <div clas="Main">
-        {bender}
-
-        {Tab == 1 ? <Home /> : Tab === 2 ? <Calendars /> : <Docs />}
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="Calendario" element={<Calendars />} />
+            <Route path="Documentos" element={<Docs />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     );
   }
 }

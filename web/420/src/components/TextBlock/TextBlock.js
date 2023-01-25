@@ -6,8 +6,19 @@ function TextBlock(props) {
       {props.ali % 2 == 0 ? (
         <div class="Block">
           <div class="TextC">
-            <h1>{props.tittle}</h1>
-            <p>{props.p}</p>
+            <h1 class="h1">{props.tittle}</h1>
+            {props.link == undefined ? (
+              <p class="p">{props.p}</p>
+            ) : (
+              <button
+                class="buttA"
+                onClick={() => {
+                  window.location.replace(props.link);
+                }}
+              >
+                Ir
+              </button>
+            )}
           </div>
           <div class="ImgC">
             <img src={props.img} />
@@ -19,8 +30,18 @@ function TextBlock(props) {
             <img src={props.img} />
           </div>
           <div class="TextC">
-            <h1>{props.tittle}</h1>
-            <p>{props.p}</p>
+            <h1 class="h1">{props.tittle}</h1>
+            {props.link == undefined ? (
+              <p class="p">{props.p}</p>
+            ) : (
+              <button
+                onClick={() => {
+                  window.location.replace(props.link);
+                }}
+              >
+                Ir
+              </button>
+            )}
           </div>
         </div>
       )}
